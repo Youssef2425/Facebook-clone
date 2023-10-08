@@ -1,0 +1,145 @@
+.editProfile {
+
+  .container {
+    display: flex;
+    background-color: #F0F2F5;
+
+    .leftSide {
+      flex: 1.4;
+      background-color: white;
+    }
+    .rightSide {
+      flex: 4;
+
+      .profilePhotos {
+        height: 350px;
+        width: 100%;
+        position: relative;
+        padding: 4px;
+
+        .coverPhoto {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+        .profilePicture {
+          position: absolute;
+          bottom: -110px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 220px;
+          height: 220px;
+          padding: 2px;
+          border: 4px solid #1877F2;
+          background-color: white;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+      .profileData {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 30px;
+        padding-top: 85px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        background-color: white;
+        -webkit-box-shadow : 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow : 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+        h3 {
+          font-size: 22px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        span {
+          display: block;
+          font-size: 18px;
+        }
+      }
+      .editData {
+        width: 80%;
+        margin: 15px auto;
+        padding: 30px 2px;
+        border-radius: 10px;
+        background-color: white;
+        -webkit-box-shadow : 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow : 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+        h2 {
+          color: #333;
+          text-align: center;
+          margin-top: 20px;
+          margin-bottom: 50px;
+        }
+
+        .editing {
+          display: flex;
+          .left {
+            flex: 1;
+            text-align: center;
+            img {
+              width: 200px;
+              height: 200px;
+              border-radius: 50%;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+          .right {
+            flex: 2;
+            form {
+              display: flex;
+              flex-direction: column;
+              padding: 5px 20px;
+
+              label {
+                font-weight: 600;
+              }
+              input {
+                font-size: 18px;
+                padding: 5px;
+                border: none;
+                background-color: transparent;
+                border-bottom: 1px solid gray;
+                margin-bottom: 25px;
+                &:focus {
+                  outline: none;
+                }
+              }
+              button {
+                width: 120px;
+                padding: 10px;
+                align-self: center;
+                letter-spacing: 1.5px;
+                font-size: 18px;
+                border-radius: 20px;
+                background-color: #1877F2;
+                color: white;
+                border: none;
+                font-weight: 500;
+                margin-top: 20px;
+                cursor: pointer;
+                &:hover {
+                  background-color: #1466d0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Responsive
+
+@media (max-width: 1200px) {
+  .leftSide {
+    display: none;
+  }
+  .editing {
+    flex-direction: column;
+  }
+} 

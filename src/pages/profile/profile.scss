@@ -1,0 +1,188 @@
+.profile {
+  .profileContainer {
+    display: flex;
+    margin-top: 10px;
+    background-color: #F0F2F5;
+
+    .profileSidebar {
+      flex: 1.1;
+      background-color: white;
+    }
+
+    .profileInfo {
+      flex: 3;
+
+      .profilePhotos {
+        height: 350px;
+        width: 100%;
+        padding: 0 5px;
+        position: relative;
+
+        .coverPhoto {
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+        .profilePicture {
+          position: absolute;
+          bottom: -110px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 220px;
+          height: 220px;
+          padding: 2px;
+          border: 4px solid #1877F2;
+          background-color: white;
+          border-radius: 50%;
+          cursor: pointer;
+          object-fit: cover;
+        }
+      }
+
+      .profileData {
+        min-height: 300px;
+        width: 80%;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-top: 30px;
+        background-color: white;
+        padding-top: 85px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+
+        .intro {
+          text-align: center;
+          h3 {
+            font-size: 22px;
+            font-weight: 600;
+            cursor: pointer;
+          }
+          span {
+            display: block;
+            font-size: 18px;
+          }
+          button {
+            padding: 5px 13px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 6px;
+            background: #1877F2;
+            color: white;
+            margin: 12px 0;
+            cursor: pointer;
+          }
+        }
+        .details {
+          display: flex;
+          color: #222;
+          
+          .left, .right {
+            flex-basis: 50%;
+            > div {
+              width: 100%;
+              font-size: 17px;
+              padding: 5px;
+              display: flex;
+              align-items: center;
+
+              span {
+                margin-right: 6px;
+              }
+              .infoKey {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      .profilePosts {
+        width: 80%;
+        margin: 0 auto;
+      }
+    }
+
+    .profileRightbar {
+      flex: 1.4;
+      background-color: white;
+      color: #222;
+      padding: 10px 5px;
+      height: calc(100vh - 53px);
+      position: sticky;
+      top: 54px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #bcbcbc;
+      }
+
+      h3 {
+        margin-bottom: 15px;
+      }
+
+      .friends {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 0 10px;
+        .friend {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          span {
+            font-size: 13.5px;
+            color: #222;
+            font-weight: 600;
+            align-self: center;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Risponsive Design
+
+@media  (max-width: 1200px) {
+  .profileSidebar {
+    display: none;
+  }
+}
+
+@media  (max-width: 992px) {
+  .profileRightbar {
+    display: none;
+  }
+}
+@media  (max-width: 780px) {
+  .profileInfo {
+    .profileData {
+      width: 95% !important;
+    }
+    .profilePosts {
+      width: 95% !important;
+    }
+  }
+  .details {
+    flex-direction: column;
+    .left, .right {
+      > div {
+        justify-content: center;
+        font-size: 14px !important;
+      }
+    }
+  }
+}

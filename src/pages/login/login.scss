@@ -1,0 +1,130 @@
+.login {
+  background: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .HomeIconLink {
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    color: #1877F2;
+    text-decoration: none;
+    .homeIcon {
+      font-size: 55px;
+    }
+    span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .container {
+    width: 70%;
+    display: flex;
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 30px 22px;
+
+      h2 {
+        font-size: 50px;
+        font-weight: 800;
+        color: #1877F2;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    .right {
+      flex: 1;
+      margin: 0 22px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        input {
+          height: 55px;
+          font-size: 18px;
+          padding-left: 10px;
+          border-radius: 10px;
+          border: 1px solid #b2b2b2 ;
+          margin: 11px 0;
+          &:focus {
+            outline: none;
+          }
+        }
+        .signupButton, .loginButton {
+          width: 80%;
+          margin: 20px auto 0;
+          padding: 13px 0;
+          font-size: 22px;
+          font-weight: bold;
+          border-radius: 10px;
+          cursor: pointer;
+          border: none;
+          color: white;
+          letter-spacing: 1px;
+        }
+          .loginButton {
+            background-color: #166fe5;
+            &:hover {
+              background-color: #1877f2;
+            }
+          }
+          .registerLink {
+            text-align: center;
+            .signupButton {
+              background-color: #36a420;
+              &:hover {
+                background-color: #42b72a;
+              }
+            }
+          }
+      }
+    }
+  }
+}
+
+// Risponsive Design
+
+@media  (max-width: 1200px) {
+  .login {
+    padding-top: 40px;
+    .container {
+      width: 100% !important;
+      flex-direction: column;
+      justify-content: center;
+  
+      .left {
+        h2 {
+          font-size: 45px !important;
+        }
+        p {
+          font-size: 20px !important;
+        }
+      }
+    }
+  }
+}
+
+@media  (max-width: 575px) {
+  .right {
+    input {
+      font-size: 13px !important;
+    }
+    button {
+      font-size: 18px !important;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+header {
+  width: 100%;
+  min-height: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  border-top: .2px solid rgb(240, 240, 240);
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  .navbarLeft{
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    .logo {
+      display: flex;
+      text-decoration: none;
+      color: #1976d2;
+      h1 {
+        display: none;
+        font-size: 29px;
+      }
+      .facebookIcon {
+        font-size: 40px;
+        color: #17A9FD;
+      }
+    }
+    .searchInput{
+      background-color: #eee;
+      display: flex;
+      align-items: center;
+      padding: 8px 22px 8px 7px;
+      border-radius: 50px;
+      margin: 6px;
+      input {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        padding: 0 10px 0 5px;
+        &::placeholder {
+          font-size: 15px;
+        }
+      }
+    }
+    .darkMode {
+      font-size: 30px;
+      color: #333;
+      cursor: pointer;
+    }
+  }
+  .navbarCenter{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    .icons {
+      flex-basis: 25%;
+      text-align: center;
+      padding: 6px 0;
+      cursor: pointer;
+      border-radius: 3px;
+      position: relative;
+      transition: 0.5s;
+      &:hover {
+        background-color: #F0F2F5;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -37px;
+          left: 40%;
+          font-size: 12px;
+          color: white;
+          background-color: #444;
+          padding: 6px 11px;
+          border-radius: 8px;
+        }
+      }
+      .navIcons {
+        color: #0000008a;
+        font-size: 25px;
+      }
+    }
+    .HomeIcon {
+      border-bottom: 3px solid #1976d2;
+      padding: 9px;
+      &:hover {
+        &::after {
+          content: 'Home';
+        }
+      }
+      .firstIcon {
+        color: #1976d2;
+        font-size: 28px;
+      }
+    }
+    .VideoIcon {
+      &:hover {
+        &::after {
+          content: 'Video';
+        }
+      }
+    }
+    .StorefrontIcon {
+      &:hover {
+        &::after {
+          content: 'Marked';
+        }
+      }
+    }
+    .GroupsIcon {
+      &:hover {
+        &::after {
+          content: 'Groups';
+        }
+      }
+    }
+  }
+  .navbarRight{
+    flex: 1.5;
+    display: flex;
+    justify-content: right;
+    padding-right: 10px;
+    margin-top: 5px;
+    .logIn {
+      display: flex;
+      align-items: center;
+      margin-right: 4px;
+      color: #1877F2;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .rightChild {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      background-color: #F0F2F5;
+      margin-right: 10px;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        &::after {
+          position: absolute;
+          bottom: -40px;
+          left: -21px;
+          font-size: 12px;
+          color: white;
+          background-color: #444;
+          padding: 8px 11px;
+          border-radius: 8px;
+        }
+      }
+    }
+    .AppsIcon {
+      &:hover {
+        &::after {
+          content: 'Menu';
+        }
+      }
+    }
+    .ChatBubbleIcon {
+      &::before {
+        content: '5';
+        position: absolute;
+        top: -9px;
+        right: -8px;
+        font-size: 14px;
+        padding: 2px 7px;
+        border-radius: 9px;
+        color: white;
+        background-color: #ea3939;
+      }
+      &:hover {
+        &::after {
+          content: 'Messanger';
+        }
+      }
+    }
+    .NotificationsIcon {
+      &::before {
+        content: '20';
+        position: absolute;
+        top: -9px;
+        right: -13px;
+        font-size: 13px;
+        padding: 2px 7px;
+        border-radius: 9px;
+        color: white;
+        background-color: #ea3939;
+      }
+      &:hover {
+        &::after {
+          content: 'Notifications';
+        }
+      }
+    }
+    .profileImg {
+      img {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      &:hover {
+        &::after {
+          content: 'Account';
+        }
+      }
+    }
+  }
+}
+
+// Responsive Desgin
+
+@media (max-width: 1199px) {
+  header {
+    .navbarLeft {
+      flex: .5;
+      .searchInput {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  header {
+    flex-wrap: wrap;
+    .navbarLeft {
+      order: 1;
+      min-width: 45%;
+
+      .logo {
+        h1 {
+          display: block;
+        }
+        .facebookIcon {
+          display: none;
+        }
+      }
+    }
+    .navbarRight {
+      order: 2;
+      min-width: 42%;
+      padding-right: 0px;
+      .AppsIcon, .ChatBubbleIcon, .NotificationsIcon {
+        display: none;
+      }
+    }
+    .navbarCenter {
+      order: 3;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .navbarLeft {
+    min-width: 100% !important;
+    justify-content: center;
+  }
+  .navbarRight {
+    min-width: 100% !important;
+    justify-content: center !important;
+  }
+}

@@ -1,0 +1,49 @@
+.contacts {
+  .contactsIcon {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  .online {
+    li {
+      position: relative;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        background-color: #e5e5e5;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #219f21;
+        bottom: 15px;
+        left: 45px;
+        border: 1px solid white;
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+      .onlineNow {
+        padding: 2px;
+        border: 2px solid #1877F2;
+      }
+      span {
+        font-weight: 600;
+        color: #333;
+        font-size: 14px;
+      }
+    }
+  }
+}

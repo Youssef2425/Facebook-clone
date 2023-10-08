@@ -1,0 +1,268 @@
+.app.dark {
+  background-color: #1f2223;
+  color: rgb(156, 156, 156);
+
+  header {
+    background-color: #181a1b;
+    color: rgb(156, 156, 156);
+    border-bottom: 0.5px solid rgb(156, 156, 156);
+    border-top: 0.2px solid rgb(156, 156, 156);
+
+    .navbarLeft {
+      .logo {
+        color: #e8e8e8;
+        .facebookIcon {
+          color: inherit;
+        }
+      }
+      .searchInput {
+        background-color: #e8e8e8;
+      }
+      .darkMode {
+        color: #e8e8e8;
+      }
+    }
+    .navbarCenter {
+      .icons {
+        &:hover {
+          background-color: #707070;
+        }
+        .navIcons {
+          color: #e8e8e8 !important;
+          .firstIcon {
+            font-size: 38px;
+          }
+        }
+      }
+      .HomeIcon {
+        border-bottom: 3px solid #e8e8e8 !important;
+      }
+    }
+    .navbarRight {
+      .logIn {
+        color: #e8e8e8;
+      }
+      .rightChild {
+        color: #222;
+        background-color: #e8e8e8;
+        img {
+          border: 2px solid white
+        }
+      }
+    }
+  }
+  .sideBar {
+    background-color: #1f2223;
+    color: lightgray;
+    .profileImg {
+      color: lightgray;
+    }
+    button {
+      color: white;
+    }
+    .menuLink {
+      &:hover {
+        background-color: #707070;
+      }
+      .menuIcon {
+        color: #e8e8e8;
+      }
+      .menuLinkText {
+        color: #e8e8e8;
+      }
+      .menuLinkTextName {
+        color: #e8e8e8;
+      }
+    }
+  }
+  .home {
+    background-color: #1f2223;
+    color: lightgray;
+  }
+  .timeLine {
+    background-color: #1f2223;
+    color: lightgray;
+  }
+  .stories {
+    background-color: #181a1b;
+    color: lightgray;
+    .storiesOrReels {
+      .reelIcon {
+        &:hover {
+          background-color: #707070;
+          border-radius: 7px;
+        }
+      }
+      .active {
+        border-bottom: 3px solid #e8e8e8;
+      }
+      .storyIcon {
+        color: #e8e8e8
+      }
+    }
+    .storiesPhotos {
+      .firstStory {
+        span {
+          color: lightgray;
+        }
+      }
+    }
+  }
+  .sharePosts {
+    background-color: #181a1b;
+    color: lightgray;
+    input {
+      background-color: #e8e8e8;
+    }
+    .shareIcon {
+      &:hover {
+        background-color: #707070;
+      }
+    }
+  }
+  .posts {
+    background-color: #181a1b;
+    color: lightgray;
+    .dateAndIcon {
+      .postDate, .publicIcon {
+        color: lightgray !important;
+      }
+    }
+    .postTopRight {
+      .editIcon {
+        color: lightgray;
+      }
+    }
+  }
+  .rightBar {
+    background-color: #1f2223;
+    color: lightgray;
+    h4 {
+      color: lightgray;
+    }
+    .giftBirthday {
+      span {
+        color: lightgray;
+      }
+    }
+  }
+  .contacts {
+    background-color: #1f2223;
+    color: lightgray;
+    .editIcon {
+      color: lightgray;
+    }
+    .online {
+      li {
+        &:hover {
+          background-color: #707070;
+        }
+        span {
+          color: lightgray;
+        }
+      }
+    }
+  }
+  .profile {
+    .profileContainer {
+      background-color: #1f2223;
+      color: lightgray;
+      .profileData {
+        background-color: #181a1b;
+        .intro {
+          button {
+            background-color: #e8e8e8;
+            color: #111;
+          }
+        }
+        .details {
+          .left, .right {
+            span {
+              color: lightgray;
+            }
+          }
+        }
+      }
+    }
+    .profileRightbar {
+      background-color: #1f2223;
+      color: lightgray;
+      .friends {
+        .friend {
+          span {
+            color: lightgray;
+          }
+        }
+      }
+    }
+  }
+  .editProfile {
+    .container {
+      background-color: #1f2223;
+      color: lightgray;
+      .profileData {
+        background-color: #181a1b;
+        color: lightgray;
+      }
+      .editData {
+        background-color: #181a1b;
+        color: lightgray;
+        h2 {
+          color: lightgray;
+        }
+        form {
+          input {
+            color: lightgray;
+          }
+        }
+      }
+    }
+  }
+  .login {
+    background-color: #1f2223;
+    color: lightgray;
+    .container{
+      .right {
+        background-color: #181a1b;
+        color: lightgray;
+        form {
+          input {
+            background-color: #181a1b;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .register {
+    background-color: #1f2223;
+    color: lightgray;
+    .container{
+      .right {
+        background-color: #181a1b;
+        .topInfo {
+          h2 {
+            color: lightgray;
+          }
+          span {
+            color: lightgray;
+          }
+        }
+        label {
+          .icon {
+            color: lightgray !important;
+          }
+        }
+        form {
+          input, select {
+            background-color: #181a1b;
+            color: lightgray;
+          }
+          h4 {
+            color: lightgray !important;
+          }
+        }
+      }
+    }
+  }
+}
